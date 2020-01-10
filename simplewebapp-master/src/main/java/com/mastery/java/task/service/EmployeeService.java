@@ -1,4 +1,8 @@
 package com.mastery.java.task.service;
 
-public class EmployeeService {
+import com.mastery.java.task.dto.Employee;
+
+public interface EmployeeService {
+	public Employee getEmployeeId(long EmployeeId);
+	
 }
