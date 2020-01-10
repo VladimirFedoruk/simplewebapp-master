@@ -25,12 +25,36 @@
 					<attachClasses>true</attachClasses>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<configuration>
+					<useTestScope>true</useTestScope>
+					<stopPort>8005</stopPort>
+					<stopKey>DIE!</stopKey>
+					<systemProperties>
+						<systemProperty>
+							<name>jetty.port</name>
+							<value>8080</value>
+						</systemProperty>
+					</systemProperties>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 	
-	        <properties>
+	
+	
+	<properties>
         <java.version>1.8</java.version>
     </properties>
 	
 	
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>1.2.3.RELEASE</version>
+		</dependency>
+	</dependencies>
 </project>
